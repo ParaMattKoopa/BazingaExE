@@ -356,7 +356,7 @@ class HScript extends SScript
 		funk.addLocalCallback("runHaxeCode", function(codeToRun:String, ?varsToBring:Any = null, ?funcToRun:String = null, ?funcArgs:Array<Dynamic> = null):Dynamic {
 			#if SScript
 			initHaxeModuleCode(funk, codeToRun, varsToBring);
-			final retVal:TeaCall = funk.hscript.executeCode(funcToRun, funcArgs);
+			final retVal:Tea = funk.hscript.executeCode(funcToRun, funcArgs);
 			if (retVal != null) {
 				if(retVal.succeeded)
 					return (retVal.returnValue == null || LuaUtils.isOfTypes(retVal.returnValue, [Bool, Int, Float, String, Array])) ? retVal.returnValue : null;
