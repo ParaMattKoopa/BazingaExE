@@ -85,7 +85,7 @@ class TitleState extends MusicBeatState
 
 		super.create();
 
-		FlxG.save.bind('funkin', CoolUtil.getSavePath());
+		FlxG.save.bind('bazinga', CoolUtil.getSavePath());
 
 		ClientPrefs.loadPrefs();
 
@@ -551,7 +551,7 @@ class TitleState extends MusicBeatState
 					#if PSYCH_WATERMARKS
 					createCoolText(['Psych Engine by'], 40);
 					#else
-					createCoolText(['ninjamuffin99', 'phantomArcade', 'kawaisprite', 'evilsk8er']);
+					createCoolText(['paramatt', 'avatarava', 'cheese emoji', 'googolplexia']);
 					#end
 				case 4:
 					#if PSYCH_WATERMARKS
@@ -563,13 +563,9 @@ class TitleState extends MusicBeatState
 				case 5:
 					deleteCoolText();
 				case 6:
-					#if PSYCH_WATERMARKS
-					createCoolText(['Not associated', 'with'], -40);
-					#else
-					createCoolText(['In association', 'with'], -40);
-					#end
+					createCoolText(['In Association', 'With'], -40);
 				case 8:
-					addMoreText('newgrounds', -40);
+					addMoreText('nobody', -40);
 					ngSpr.visible = true;
 				case 9:
 					deleteCoolText();
@@ -581,11 +577,11 @@ class TitleState extends MusicBeatState
 				case 13:
 					deleteCoolText();
 				case 14:
-					addMoreText('Friday');
+					addMoreText('What');
 				case 15:
-					addMoreText('Night');
+					addMoreText('The');
 				case 16:
-					addMoreText('Funkin'); // credTextShit.text += '\nFunkin';
+					addMoreText('Bazinga'); // credTextShit.text += '\nFunkin';
 
 				case 17:
 					skipIntro();
